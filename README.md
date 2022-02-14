@@ -19,11 +19,11 @@ $ pip install -r requirements.txt
 ```{python}
 
 # a. transfer from cell lines to tumors
-$ python ./script/TranPathDSP_CV.py -data ./input_data/Tumor.CHEM-DGNet.EXP.pkl -pretrained ./gdsc_celllinemodel/Tumor.Pretrained.CellLineModel.h5 -f PID_REACTOME -param ./data/Tumor.bayes_opt.best_params.txt -o Tumor
+$ python ./script/TranPathDSP.py -data ./input_data/Tumor.CHEM-DGNet.EXP.pkl -pretrained ./gdsc_celllinemodel/Tumor.Pretrained.CellLineModel.h5 -f PID_REACTOME -param ./data/Tumor.bayes_opt.best_params.txt -o Tumor
 
 # b. transfer from cell lines to PDX-D 
-$ python ./script/TranPathDSP_CV.py -data ./input_data/PDX_D.CHEM-DGNet.EXP.pkl -pretrained ./gdsc_celllinemodel/PDX_D.Pretrained.CellLineModel.h5 -f PID -param ./data/PDX_D.bayes_opt.best_params.txt -o PDX_D
+$ python ./script/TranPathDSP.py -data ./input_data/PDX_D.CHEM-DGNet.EXP.pkl -pretrained ./gdsc_celllinemodel/PDX_D.Pretrained.CellLineModel.h5 -f PID -param ./data/PDX_D.bayes_opt.best_params.txt -o PDX_D
 
 # c. transfer from cell lines to PDX-C
-$ python ./script/TranPathDSP_CV.py -data ./input_data/PDX_C.CHEM-DGNet.EXP.pkl -pretrained ./gdsc_celllinemodel/PDX_C.Pretrained.CellLineModel.h5 -f PID -param ./data/PDX_C.bayes_opt.best_params.txt -o PDX_C
+$ python ./script/TranPathDSP.py -data ./input_data/PDX_C.CHEM-DGNet.EXP.pkl -pretrained ./gdsc_celllinemodel/PDX_C.Pretrained.CellLineModel.h5 -f PID -param ./data/PDX_C.bayes_opt.best_params.txt -o PDX_C
 ```
