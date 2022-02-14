@@ -4,10 +4,11 @@ Molecular Pathways Enhances Drug Response Prediction using Transfer Learning fro
 
 # Download TranPathDSP
 
-`via git clone
+```{python}
+# a. install TranPathDSP via git clone
 $ git clone https://github.com/TangYiChing/TranPathDSP
 
-## install SynPathy to a conda environment 
+# b. install TranPathDSP to a conda environment 
 $ pip install -r requirements.txt
 
 
