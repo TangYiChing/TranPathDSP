@@ -1,0 +1,14 @@
+param	CHEM-DGNet-EXP.CV_Fold0.train.pkl
+batch_size	37.91534257681687
+dropout_float	0.4847923138822793
+earlyStop	41.00531293444458
+epoch	96.97494707820945
+learning_rate	0.08948378676926061
+n_layer	3.3915999152443406
+n_neuron	474.4996328110961
+target	0.11012050127724075
+optimizer	adadelta
+activation	elu
+feature	PID
+use_layer	hidden2
+retrain	True
