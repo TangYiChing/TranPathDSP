@@ -1,5 +1,5 @@
-# processed file -- CHEM
+# processed drug structure -- CHEM
 
-# processed file -- DGNet
+# processed drug-target associated network -- DGNet
 
-# processed file -- EXP
+# processed gene expression -- EXP
