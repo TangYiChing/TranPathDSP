@@ -14,8 +14,6 @@ $ pip install -r requirements.txt
 
 # How to run TranPathDSP?
 
-## Note. before running the following code, please download the corresponding pretrained cell line models at:
-
 ```{python}
 
 # a. transfer from cell lines to tumors
