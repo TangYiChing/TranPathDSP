@@ -2,7 +2,7 @@
 
 step1. install bayesopt: https://github.com/rmcantin/bayesopt
 
-step2. download pretrained cell line model at: https://doi.org/10.5281/zenodo.6093818/
+step2. download pretrained cell line model at: https://doi.org/10.5281/zenodo.6093818
 
 step3. execute the following python script
 
