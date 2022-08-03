@@ -17,7 +17,7 @@ $ pip install -r requirements.txt
 ```{python}
 
 # a. transfer from cell lines to tumors
-# note: please download GDSC.PID_REACTOMEModel.h5 at: https://doi.org/10.5281/zenodo.6093818
+<> note: please download GDSC.PID_REACTOMEModel.h5 at: https://doi.org/10.5281/zenodo.6093818
 $ python ./script/TranPathDSP.py -data ./input_data/Tumor.CHEM-DGNet.EXP.pkl -pretrained ./Tumor.GDSC.PretrainedModel/GDSC.PID_REACTOME.PretrainedModel.h5 -f PID_REACTOME -param ./data/Tumor.bayes_opt.best_params.txt -o Tumor
 
 # b. transfer from cell lines to PDX-D 
