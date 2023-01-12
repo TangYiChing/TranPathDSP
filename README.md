@@ -19,9 +19,9 @@ $ python ./script/TranPathDSP.py -g 0 -data ./input_data/Tumor.CHEM-DGNet-EXP.pk
 
 # b. transfer from cell lines to PDX-D (change -g 0 to other GPU number that is available on your system)
 # note: please download GDSC.PID.PretrainedModel.h5 at: https://doi.org/10.5281/zenodo.6093818
-$ python ./script/TranPathDSP.py -g 0 -data ./input_data/PDX_D.CHEM-DGNet.EXP.pkl -pretrained ./PDX_D.GDSC.PretrainedModel/GDSC.PID.PretrainedModel.h5 -f PID -param ./data/PDX_D.bayes_opt.best_params.txt -o PDX_D -task classification
+$ python ./script/TranPathDSP.py -g 0 -data ./input_data/PDX_D.CHEM-DGNet-EXP.pkl -pretrained ./PDX_D.GDSC.PretrainedModel/GDSC.PID.PreTrainedModel.h5 -f PID -param ./PDX_D.bayes_opt.best_params.txt -o PDX_D -task classification
 
 # c. transfer from cell lines to PDX-C (change -g 0 to other GPU number that is available on your system)
 # note: please download GDSC.PID.PretrainedModel.h5 at: https://doi.org/10.5281/zenodo.6093818
-$ python ./script/TranPathDSP.py -g 0 -data ./input_data/PDX_C.CHEM-DGNet.EXP.pkl -pretrained ./PDX_C.GDSC.PretrainedModel/GDSC.PID.PretrainedModel.h5 -f PID -param ./data/PDX_C.bayes_opt.best_params.txt -o PDX_C -task regression
+$ python ./script/TranPathDSP.py -g 0 -data ./input_data/PDX_C.CHEM-DGNet-EXP.pkl -pretrained ./PDX_C.GDSC.PretrainedModel/GDSC.PID.PreTrainedModel.h5 -f PID -param ./PDX_C.bayes_opt.best_params.txt -o PDX_C -task regression
 ```
