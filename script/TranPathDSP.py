@@ -325,12 +325,39 @@ def parse_parameter():
         required=False,
         default=0.01,
         help='n_neurons')
+    parser.add_argument(
+        '--activation',
+        type=str,
+        required=False,
+        default='relu',
+        help='activation function')
+    parser.add_argument(
+        '--dropout',
+        type=float,
+        required=False,
+        default=0.1,
+        help='dropout')
 
     return parser.parse_args()
 
 if __name__ == "__main__":
     # get args
     args = parse_parameter()
+    #Load parameters (originally from file)
+    print(vars(args))
+    param_dict = vars(args)
+    param_dict['batch_size'] = round(float(args.batch_size))
+    param_dict['dropout_float'] = float(args.dropout)
+    param_dict['earlyStop'] = round(float(args.early_stop))
+    param_dict['epoch'] = round(float(args.epochs))
+    param_dict['learning_rate'] = float(args.learning_rate)
+    param_dict['n_layer'] = 2
+    param_dict['n_neuron'] = round(float(args.dense))
+    param_dict['retrain'] = eval("False")
+    param_dict['use_layer'] = "hidden1"
+    param_dict['activation'] = args.activation
+    #print(param_dict)
+
     # set seed
     np.random.seed(args.seed_int)
     tf.random.set_seed(args.seed_int)
@@ -432,20 +459,6 @@ if __name__ == "__main__":
         cv_dict[cv_str]['train'] = scaled_train_df
         cv_dict[cv_str]['valid'] = scaled_valid_df
         cv_dict[cv_str]['test'] = scaled_test_df
-
-    #Load parameters (originally from file)
-    print(vars(args))
-    param_dict = vars(args)
-    #param_dict['batch_size'] = round(float(args.batch_size))
-    #param_dict['dropout_float'] = float(args.dropout)
-    #param_dict['earlyStop'] = round(float(args.early_stop))
-    #param_dict['epoch'] = round(float(args.epoch))
-    #param_dict['learning_rate'] = float(args.learning_rate)
-    param_dict['n_layer'] = 2
-    #param_dict['n_neuron'] = round(float(args.dense))
-    param_dict['retrain'] = eval("False")
-    param_dict["use_layer"] = "hidden1"
-    #print(param_dict)
         
     # cross validation
     for i in range(0, args.cv_int):
